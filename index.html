@@ -1479,6 +1479,11 @@
     @media(max-width:560px){.ia-theme-grid{gap:12px}.ia-art-panel{height:112px}.ia-art-panel .ia-art{width:155px;height:108px}.ia-theme-copy{padding:15px}.ia-theme-copy h3{font-size:17px}.ia-theme-copy p{font-size:12px;margin-bottom:12px}.ia-theme-copy .meta{font-size:10px;line-height:1.5}.ia-daily{align-items:start;padding:17px;flex-direction:column}.ia-mini-art{display:none}.ia-tense-card{padding:16px}.ia-tense-card strong{font-size:18px}.ia-tools .filter-row{gap:5px}.ia-tools .chip{font-size:11px;padding:0 10px}.ia-topic-card{padding:18px}.ia-topic-card h3{font-size:18px}.ia-topic-card p{font-size:13px}.ia-topic-card .eyebrow{font-size:9px}.ia-tabs{gap:8px}.ia-tabs .chip{padding:0 16px}.ia-action-row .button{font-size:12px}.page{padding-left:16px;padding-right:16px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 
+      .bottom-nav{grid-template-columns:repeat(4,1fr)!important}
+    .ia-hero-banner{position:relative;isolation:isolate;overflow:hidden;border-radius:26px;min-height:250px;margin:25px 0 28px;padding:40px 42px;display:flex;align-items:center;justify-content:space-between;gap:24px;color:#253e36}.ia-hero-banner h2{font-size:clamp(32px,5vw,52px);margin:12px 0;letter-spacing:-.045em;line-height:1.08}.ia-hero-banner p{font-size:16px;max-width:440px;line-height:1.55}.ia-hero-banner .eyebrow{color:#435f53}.ia-hero-art{flex-shrink:0;position:relative;z-index:1}.ia-hero-art .ia-art{width:320px;height:224px}.ia-hero-shape{position:absolute;width:460px;height:460px;background:#ffffff35;border-radius:50%;right:-100px;top:-160px;z-index:-1}.ia-conversation{padding:26px;border:1px solid var(--border);background:var(--surface);border-radius:22px}.ia-conversation-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:22px}.ia-conversation-heading h3{font-size:23px;margin:8px 0 0;letter-spacing:-.025em}.ia-dialogue-row{display:flex;gap:16px;align-items:start;max-width:780px;padding:14px 17px;border-radius:15px;margin:10px 0;background:var(--surface-2)}.ia-dialogue-row.ia-reply{margin-left:40px;background:var(--accent-soft)}.ia-dialogue-row>div{flex:1;min-width:0}.ia-dialogue-row p{margin:0 0 5px;line-height:1.55}.ia-dialogue-row .icon-button{flex-shrink:0;width:32px;height:32px;box-shadow:none;background:transparent}.ia-person{color:var(--muted);font-size:12px;font-weight:700;min-width:78px;line-height:1.8}.ia-sort-label{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted)}.ia-sort-label select{width:auto;padding:9px;border-radius:12px}.ia-compact-verb{cursor:default}.ia-verb-open{appearance:none;background:none;border:0;text-align:left;color:var(--text);padding:18px 0;display:flex;flex-direction:column;gap:8px;width:100%;cursor:pointer}.ia-verb-open strong{font-size:29px;letter-spacing:-.03em}.ia-verb-open span{color:var(--muted);font-size:16px}.ia-verb-open small{color:var(--accent);margin-top:10px}.ia-verb-open:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:8px}.ia-content-section{margin-top:35px}.ia-content-section .section-heading{align-items:center}.ia-content-section .section-heading h3{font-size:26px}.modal-card:has(.ia-full-verb){width:min(760px,calc(100vw - 30px));max-height:90vh;overflow:auto}.ia-full-verb-meta{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:22px}.ia-modal-tense-tabs{display:flex;flex-wrap:wrap;gap:8px}.ia-large-conjugation{margin:22px 0}.ia-large-conjugation .split-row{padding:12px 0;font-size:20px}.ia-large-conjugation .split-row>span{font-size:16px;min-width:90px}.ia-verb-example{padding:18px;background:var(--surface-2);border-radius:15px;line-height:1.65}.ia-related{margin-top:25px;padding-top:20px;border-top:1px solid var(--border)}.ia-related summary{cursor:pointer;font-weight:650}.card-tools .icon-button.active{background:var(--accent-soft);color:var(--accent)}.card-tools .icon-button.active svg{fill:var(--accent)}
+    @media(max-width:700px){.ia-hero-banner{padding:28px;min-height:220px}.ia-hero-art .ia-art{width:200px;height:140px}.ia-dialogue-row{gap:10px}.ia-person{min-width:65px}.ia-dialogue-row.ia-reply{margin-left:18px}}
+    @media(max-width:480px){.ia-hero-banner{padding:23px;min-height:250px;align-items:start}.ia-hero-banner>div:first-child{position:relative;z-index:2;max-width:78%}.ia-hero-banner p{font-size:14px;padding-bottom:50px}.ia-hero-art{position:absolute;right:0;bottom:0;opacity:.9}.ia-hero-art .ia-art{width:145px;height:102px}.ia-conversation{padding:18px}.ia-conversation-heading{align-items:start;flex-direction:column}.ia-dialogue-row{padding:12px;flex-wrap:wrap;position:relative;padding-right:46px}.ia-dialogue-row>div{flex:1 1 100%}.ia-dialogue-row .icon-button{position:absolute;right:8px;top:8px}.ia-dialogue-row.ia-reply{margin-left:14px}.ia-large-conjugation .split-row{font-size:18px}.ia-content-section .section-heading h3{font-size:22px}.ia-modal-tense-tabs .chip{font-size:12px;padding:0 11px}.ia-tools{gap:9px}}
+
   </style>
 </head>
 <body>
@@ -2705,7 +2710,7 @@
           <button class="button ghost small lesson-back-button" type="button" data-action="back-to-topics">← Retour aux thèmes</button>
           <div class="lesson-header"><div class="lesson-title-row"><div><span class="eyebrow">${escapeHTML(displayType(type))} · ${time} min</span><h2>${escapeHTML(displayTopic(topic))}</h2><p>${escapeHTML(description)}</p></div><div class="lesson-actions"><button class="button secondary small" type="button" data-action="toggle-translations">${state.translationsVisible ? 'Masquer' : 'Afficher'} le français</button><button class="button primary small" type="button" data-action="practice-topic">Pratiquer ce thème</button><button class="button secondary small" type="button" data-action="add-item" data-type="${type}">Ajouter</button></div></div></div>
           ${type === 'grammar' ? renderGrammarLesson(items[0]) : type === 'verbs' ? renderVerbLesson(items) : renderVocabularyLesson(topic, items)}
-          <article class="card" style="margin-top:18px"><div class="section-heading" style="margin:0 0 12px"><div><h3>Notes personnelles</h3><p>Enregistrées automatiquement dans ce navigateur.</p></div></div><textarea class="notes-area" data-action="lesson-note" placeholder="Ajoutez un rappel, un exemple ou une question...">${escapeHTML(state.personalNotes[`${type}:${topic}`] || '')}</textarea></article>
+
         </section>`;
     }
 
@@ -2791,7 +2796,7 @@
 
     function familyDetailActionsHTML(data) {
       if (!data?.itemId) return '';
-      return `${cardIconButton({ action: 'speak', icon: 'speaker', label: 'Écouter', text: data.term || '' })}${cardIconButton({ action: 'practice-item', icon: 'play', label: 'Pratiquer cet élément', id: data.itemId })}${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: data.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: data.itemId, active: data.favourite })}${cardIconButton({ action: 'toggle-difficult', icon: 'difficult', label: data.difficult ? 'Retirer des difficiles' : 'Marquer comme difficile', id: data.itemId, active: data.difficult })}`;
+      return `${cardIconButton({ action: 'speak', icon: 'speaker', label: 'Écouter', text: data.term || '' })}${cardIconButton({ action: 'practice-item', icon: 'play', label: 'Pratiquer cet élément', id: data.itemId })}${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: data.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: data.itemId, active: data.favourite })}`;
     }
 
     function familyInteractiveAttrs(entry) {
@@ -2955,7 +2960,7 @@
 
     function bodyDetailActionsHTML(data) {
       if (!data?.itemId) return '';
-      return `${cardIconButton({ action: 'speak', icon: 'speaker', label: 'Écouter', text: data.term || '' })}${cardIconButton({ action: 'practice-item', icon: 'play', label: 'Pratiquer cet élément', id: data.itemId })}${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: data.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: data.itemId, active: data.favourite })}${cardIconButton({ action: 'toggle-difficult', icon: 'difficult', label: data.difficult ? 'Retirer des difficiles' : 'Marquer comme difficile', id: data.itemId, active: data.difficult })}`;
+      return `${cardIconButton({ action: 'speak', icon: 'speaker', label: 'Écouter', text: data.term || '' })}${cardIconButton({ action: 'practice-item', icon: 'play', label: 'Pratiquer cet élément', id: data.itemId })}${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: data.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: data.itemId, active: data.favourite })}`;
     }
 
     function bodyInteractiveAttrs(entry) {
@@ -3129,12 +3134,12 @@
         <div class="translation ${translationVisible ? 'visible' : ''}" data-translation>${escapeHTML(item.french)}</div>
         <div class="example">${escapeHTML(item.exampleIt || '')}</div>
         ${translationVisible && item.exampleFr ? `<div class="example-translation">${escapeHTML(item.exampleFr)}</div>` : ''}
-        ${item.note ? `<div class="meta" style="margin-top:10px">Note : ${escapeHTML(item.note)}</div>` : ''}
-        <div class="meta-row"><span class="badge ${item.difficulty === 'difficult' ? 'warning' : ''}">${item.difficulty === 'difficult' ? 'difficile' : 'normal'}</span><span class="badge">Prochaine : ${item.nextReview ? formatDate(item.nextReview) : 'aujourd’hui'}</span></div>
+        
+
         <div class="card-tools">
           ${cardIconButton({ action: 'reveal-card', icon: 'eye', label: 'Afficher la traduction', id: item.id })}
           ${cardIconButton({ action: 'speak', icon: 'speaker', label: 'Écouter', text: item.italian })}
-          ${cardIconButton({ action: 'toggle-difficult', icon: 'difficult', label: item.difficulty === 'difficult' ? 'Retirer des difficiles' : 'Marquer comme difficile', id: item.id, active: item.difficulty === 'difficult' })}
+          
           ${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: item.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: item.id, active: item.favourite })}
           ${cardIconButton({ action: 'practice-item', icon: 'play', label: 'Pratiquer cet élément', id: item.id })}
           ${cardIconButton({ action: 'edit-item', icon: 'edit', label: 'Modifier', id: item.id })}
@@ -3155,7 +3160,7 @@
         <details class="lesson-panel" style="margin:10px 0 0;box-shadow:none"><summary>Futuro semplice</summary><div class="lesson-panel-content">${Object.values(item.future || {}).some(Boolean) ? Object.entries(item.future || {}).map(([person, value]) => `<div class="split-row"><span>${escapeHTML(person)}</span><strong>${escapeHTML(value)}</strong></div>`).join('') : '<p class="meta">Les formes du futur n’ont pas encore été ajoutées. Utilisez Modifier pour les renseigner.</p>'}</div></details>
         <div class="card-tools">
           ${cardIconButton({ action: 'speak', icon: 'speaker', label: 'Écouter', text: item.infinitive })}
-          ${cardIconButton({ action: 'toggle-difficult', icon: 'difficult', label: item.difficulty === 'difficult' ? 'Retirer des difficiles' : 'Marquer comme difficile', id: item.id, active: item.difficulty === 'difficult' })}
+          
           ${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: item.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: item.id, active: item.favourite })}
           ${cardIconButton({ action: 'practice-item', icon: 'play', label: 'Pratiquer ce verbe', id: item.id })}
           ${cardIconButton({ action: 'edit-item', icon: 'edit', label: 'Modifier le verbe', id: item.id })}
@@ -3172,7 +3177,7 @@
         ${item.table ? `<details class="lesson-panel" open><summary>${escapeHTML(item.tableTitle || 'Tableau')}</summary><div class="lesson-panel-content">${renderGrammarTable(item.table)}</div></details>` : ''}
         <details class="lesson-panel"><summary>Erreurs fréquentes</summary><div class="lesson-panel-content"><p>${escapeHTML(item.mistakes)}</p></div></details>
         <details class="lesson-panel"><summary>À retenir</summary><div class="lesson-panel-content"><p>${escapeHTML(item.remember)}</p></div></details>
-        <article class="card"><div class="split-row"><div><h3>Pratiquer maintenant</h3><p>Utilisez le rappel actif pour appliquer cette règle.</p></div><button class="button primary small" type="button" data-action="practice-topic">Commencer</button></div><div class="card-tools">${cardIconButton({ action: 'toggle-difficult', icon: 'difficult', label: item.difficulty === 'difficult' ? 'Retirer des difficiles' : 'Marquer comme difficile', id: item.id, active: item.difficulty === 'difficult' })}${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: item.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: item.id, active: item.favourite })}${cardIconButton({ action: 'edit-item', icon: 'edit', label: 'Modifier la note de grammaire', id: item.id })}${item.custom ? cardIconButton({ action: 'delete-item', icon: 'trash', label: 'Supprimer la note de grammaire', id: item.id, danger: true }) : ''}</div></article>
+        <article class="card"><div class="split-row"><div><h3>Pratiquer maintenant</h3><p>Utilisez le rappel actif pour appliquer cette règle.</p></div><button class="button primary small" type="button" data-action="practice-topic">Commencer</button></div><div class="card-tools">${cardIconButton({ action: 'toggle-favourite', icon: 'heart', label: item.favourite ? 'Retirer des favoris' : 'Ajouter aux favoris', id: item.id, active: item.favourite })}${cardIconButton({ action: 'edit-item', icon: 'edit', label: 'Modifier la note de grammaire', id: item.id })}${item.custom ? cardIconButton({ action: 'delete-item', icon: 'trash', label: 'Supprimer la note de grammaire', id: item.id, danger: true }) : ''}</div></article>
       </div>`;
     }
 
@@ -3593,7 +3598,7 @@
           ${field('Futuro semplice', 'futureConjugation', item ? Object.values(item.future || {}).join(', ') : '', false, 'io, tu, lui/lei, noi, voi, loro')}
           ${textareaField('Exemple en italien', 'exampleIt', item?.exampleIt)}
           ${textareaField('Exemple en français', 'exampleFr', item?.exampleFr)}
-          ${textareaField('Notes', 'notes', item?.notes)}
+
         `;
       } else {
         fields = `
@@ -3603,7 +3608,7 @@
           ${textareaField('Exemples', 'examples', Array.isArray(item?.examples) ? item.examples.join('\n') : item?.examples, false, 'Un exemple par ligne')}
           ${textareaField('Erreur fréquente', 'mistakes', item?.mistakes)}
           ${textareaField('À retenir', 'remember', item?.remember)}
-          ${textareaField('Note personnelle', 'personalNote', item?.personalNote)}
+
         `;
       }
       return `<div class="modal-header"><div><h2 id="modalTitle">${title}</h2><p>Enregistré localement dans ce navigateur.</p></div><button class="icon-button" type="button" data-action="close-modal" aria-label="Fermer">${icons.close}</button></div>
@@ -3631,14 +3636,14 @@
       const baseReview = existing || { difficulty: 'normal', favourite: false, reviewStatus: 'new', lastReviewed: null, nextReview: addDays(new Date(), 1), reviewCount: 0, correctCount: 0, incorrectCount: 0, interval: 1, custom: true, deleted: false, createdAt: nowIso() };
       let updated;
       if (type === 'vocabulary') {
-        updated = { ...baseReview, id: existing?.id || uid('custom_vocab'), italian: data.italian.trim(), french: data.french.trim(), article: data.article.trim(), category: data.category, wordType: data.wordType.trim(), accepted: data.accepted.split(',').map(s => s.trim()).filter(Boolean), exampleIt: data.exampleIt.trim(), exampleFr: data.exampleFr.trim(), note: data.note.trim(), custom: true };
+        updated = { ...baseReview, id: existing?.id || uid('custom_vocab'), italian: data.italian.trim(), french: data.french.trim(), article: data.article.trim(), category: data.category, wordType: data.wordType.trim(), accepted: data.accepted.split(',').map(s => s.trim()).filter(Boolean), exampleIt: data.exampleIt.trim(), exampleFr: data.exampleFr.trim(), note: existing?.note || '', custom: true };
       } else if (type === 'verbs') {
         const forms = data.presentConjugation.split(',').map(s => s.trim());
         const futureForms = data.futureConjugation.split(',').map(s => s.trim());
         
-        updated = { ...baseReview, id: existing?.id || uid('custom_verb'), infinitive: data.infinitive.trim(), french: data.french.trim(), category: data.category, auxiliary: data.auxiliary, regularity: existing?.regularity || 'custom', pastParticiple: data.pastParticiple.trim(), present: { io: forms[0] || '', tu: forms[1] || '', lui: forms[2] || '', noi: forms[3] || '', voi: forms[4] || '', loro: forms[5] || '' }, future: { io: futureForms[0] || '', tu: futureForms[1] || '', lui: futureForms[2] || '', noi: futureForms[3] || '', voi: futureForms[4] || '', loro: futureForms[5] || '' }, exampleIt: data.exampleIt.trim(), exampleFr: data.exampleFr.trim(), notes: data.notes.trim(), custom: true };
+        updated = { ...baseReview, id: existing?.id || uid('custom_verb'), infinitive: data.infinitive.trim(), french: data.french.trim(), category: data.category, auxiliary: data.auxiliary, regularity: existing?.regularity || 'custom', pastParticiple: data.pastParticiple.trim(), present: { io: forms[0] || '', tu: forms[1] || '', lui: forms[2] || '', noi: forms[3] || '', voi: forms[4] || '', loro: forms[5] || '' }, future: { io: futureForms[0] || '', tu: futureForms[1] || '', lui: futureForms[2] || '', noi: futureForms[3] || '', voi: futureForms[4] || '', loro: futureForms[5] || '' }, exampleIt: data.exampleIt.trim(), exampleFr: data.exampleFr.trim(), notes: existing?.notes || '', custom: true };
       } else {
-        updated = { ...baseReview, id: existing?.id || uid('custom_grammar'), title: data.title.trim(), category: data.category, description: data.explanation.trim().slice(0, 120), explanation: data.explanation.trim(), examples: data.examples.split('\n').map(s => s.trim()).filter(Boolean), mistakes: data.mistakes.trim(), remember: data.remember.trim(), personalNote: data.personalNote.trim(), time: existing?.time || 8, custom: true };
+        updated = { ...baseReview, id: existing?.id || uid('custom_grammar'), title: data.title.trim(), category: data.category, description: data.explanation.trim().slice(0, 120), explanation: data.explanation.trim(), examples: data.examples.split('\n').map(s => s.trim()).filter(Boolean), mistakes: data.mistakes.trim(), remember: data.remember.trim(), personalNote: existing?.personalNote || '', time: existing?.time || 8, custom: true };
       }
       if (type === 'verbs') {
         const values = (data.imperfectConjugation || '').split(',').map(s => s.trim());
@@ -3882,7 +3887,7 @@
     matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', () => { if (state.theme === 'system') applyTheme(); });
 
     // Navigation is a view of the existing collections: item IDs and review history stay stable.
-    const IA_NAV = [['themes','Thèmes','Situations de la vie quotidienne','home'],['verbs','Verbes','Un temps, des verbes, des exemples','book'],['building','Faire une phrase','Les mots qui relient vos idées','edit'],['grammar','Grammaire','Comprendre les règles, simplement','book'],['practice','Pratiquer','Rappel actif et exercices','play']];
+    const IA_NAV = [['themes','Thèmes','Situations de la vie quotidienne','home'],['verbs','Verbes','Un temps, des verbes, des exemples','book'],['grammar','Grammaire','Comprendre les règles, simplement','book'],['practice','Pratiquer','Rappel actif et exercices','play']];
     const IA_THEMES = [
       ['basics','Les bases','Se présenter, compter, poser une question.','Basics','hello',['essere','avere','stare','parlare']],
       ['restaurant','Au restaurant','Réserver, commander et demander l’addition.','Food and restaurants','food',['volere','prendere','bere','scegliere']],
@@ -3895,6 +3900,7 @@
       ['family','Famille et proches','Présenter les personnes qui comptent.','People and family','family',['essere','avere','venire']],
       ['health','Corps et santé','Nommer le corps et expliquer comment on se sent.','Body and health','health',['stare','avere','dormire']],
       ['admin','Argent et démarches','Banque, assurance et formalités.','Money and administration','post',['avere','dovere','potere']],
+      ['conversation','Parler naturellement','Relier les idées, raconter et demander poliment.','Useful expressions','hello',['dire','sapere','volere','potere','dovere']],
       ['other','Mes autres mots','Le vocabulaire de cours et vos expressions.','General vocabulary','hello',['sapere','dire']]
     ];
     const IA_BUILD = [
@@ -3968,6 +3974,10 @@
       topicMetadata.grammar['Verbes pronominaux']=['Comprendre mi, ti, si et l’auxiliaire essere.',8];
       if(!state.iaVersion){state.section='themes';state.currentTopic=null;state.iaVersion=1;}
       if(state.section==='today')state.section='themes';
+      if(state.section==='building') {state.section='themes';state.iaTheme='conversation';}
+      state.filter='all';state.iaVersion=2;
+      if(!['all','Essential verbs','Modal verbs','Reflexive verbs'].includes(state.iaVerbGroup))state.iaVerbGroup='all';
+      IA_PRESENTATION.forEach((row,n)=>{const id='v_ia_presentation_'+n;if(!state.vocabulary.some(i=>i.id===id||normalizeAnswer(i.italian)===normalizeAnswer(row[0])))state.vocabulary.push({id,italian:row[0],french:row[1],exampleIt:row[0],exampleFr:row[1],category:'Basics',wordType:'phrase',iaPresentation:true,accepted:[],difficulty:'normal',favourite:false,reviewCount:0,interval:1,nextReview:todayKey(),custom:false,deleted:false});});
       saveState();
     }
     function iaArt(kind) {
@@ -3984,29 +3994,67 @@
         health:'<rect x="58" y="24" width="83" height="91" rx="18" fill="#84a69d"/><path d="M87 43h25v18h18v25h-18v18H87V86H69V61h18Z" fill="#fff2dc"/>'};
       return `<svg class="ia-art" viewBox="0 0 200 140" aria-hidden="true" fill="none" stroke="#455c54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="70" r="60" fill="#ffffff" opacity=".27" stroke="none"/>${art[kind]||art.hello}</svg>`;
     }
+    const IA_DIALOGUES = {
+      basics:[['Luca','Ciao! Come ti chiami?','Salut ! Comment t’appelles-tu ?'],['Rudy','Mi chiamo Rudy. Sono francese e vivo a Zurigo.','Je m’appelle Rudy. Je suis français et je vis à Zurich.'],['Luca','Che lavoro fai?','Quel métier fais-tu ?'],['Rudy','Lavoro nel commercio digitale. E tu?','Je travaille dans le commerce numérique. Et toi ?']],
+      restaurant:[['Cameriere','Buonasera! Avete una prenotazione?','Bonsoir ! Avez-vous une réservation ?'],['Rudy','Sì, un tavolo per due a nome di Rudy.','Oui, une table pour deux au nom de Rudy.'],['Rudy','Sono vegetariano. Che cosa mi consiglia?','Je suis végétarien. Que me conseillez-vous ?'],['Cameriere','Le consiglio la pasta con le verdure.','Je vous conseille les pâtes aux légumes.']],
+      hotel:[['Reception','Buonasera, come posso aiutarla?','Bonsoir, comment puis-je vous aider ?'],['Rudy','Ho una prenotazione a nome di Rudy.','J’ai une réservation au nom de Rudy.'],['Rudy','Vorrei una camera tranquilla, per favore.','Je voudrais une chambre calme, s’il vous plaît.'],['Reception','Certo. La colazione è dalle sette alle dieci.','Bien sûr. Le petit-déjeuner est de sept à dix heures.']],
+      travel:[['Rudy','Vorrei un biglietto per Bergamo.','Je voudrais un billet pour Bergame.'],['Impiegata','Solo andata o andata e ritorno?','Aller simple ou aller-retour ?'],['Rudy','Andata e ritorno. Da quale binario parte il treno?','Aller-retour. De quel quai part le train ?'],['Impiegata','Dal binario tre.','Du quai trois.']],
+      work:[['Luca','A che ora è la riunione?','À quelle heure est la réunion ?'],['Rudy','Alle dieci. Prima devo finire questo lavoro.','À dix heures. Avant, je dois finir ce travail.'],['Luca','Posso aiutarti?','Puis-je t’aider ?'],['Rudy','Sì, grazie. Possiamo parlarne adesso?','Oui, merci. Pouvons-nous en parler maintenant ?']],
+      shop:[['Rudy','Scusi, avete una taglia più grande?','Excusez-moi, avez-vous une taille plus grande ?'],['Commessa','Sì, ecco. Vuole provarla?','Oui, voilà. Voulez-vous l’essayer ?'],['Rudy','Sì, grazie. Quanto costa?','Oui, merci. Combien ça coûte ?'],['Commessa','Costa trenta euro.','Ça coûte trente euros.']],
+      post:[['Rudy','Vorrei spedire questo pacco in Francia.','Je voudrais envoyer ce colis en France.'],['Impiegata','Vuole una spedizione tracciabile?','Voulez-vous un envoi avec suivi ?'],['Rudy','Sì, grazie. Quanto tempo ci vuole?','Oui, merci. Combien de temps faut-il ?'],['Impiegata','Circa quattro giorni.','Environ quatre jours.']],
+      home:[['Luca','A che ora ti svegli di solito?','À quelle heure te réveilles-tu d’habitude ?'],['Rudy','Mi sveglio alle sette, poi faccio colazione.','Je me réveille à sept heures, puis je prends le petit-déjeuner.'],['Luca','Oggi lavori da casa?','Aujourd’hui, tu travailles de chez toi ?'],['Rudy','Sì, ma stasera esco.','Oui, mais ce soir je sors.']],
+      family:[['Luca','Hai fratelli o sorelle?','As-tu des frères ou des sœurs ?'],['Rudy','Sì, ho una sorella. E tu?','Oui, j’ai une sœur. Et toi ?'],['Luca','Ho due fratelli. I miei genitori vivono in Italia.','J’ai deux frères. Mes parents vivent en Italie.']],
+      health:[['Luca','Come stai oggi?','Comment vas-tu aujourd’hui ?'],['Rudy','Non molto bene. Mi fa male la testa.','Pas très bien. J’ai mal à la tête.'],['Luca','Hai dormito bene?','As-tu bien dormi ?'],['Rudy','No, ho dormito poco.','Non, j’ai peu dormi.']],
+      admin:[['Rudy','Buongiorno, vorrei aprire un conto.','Bonjour, je voudrais ouvrir un compte.'],['Impiegata','Ha un documento d’identità?','Avez-vous une pièce d’identité ?'],['Rudy','Sì. Quali documenti servono?','Oui. Quels documents faut-il ?']],
+      other:[['Luca','Che cosa significa questa parola?','Que signifie ce mot ?'],['Rudy','Non lo so. Possiamo cercarla insieme.','Je ne sais pas. Nous pouvons le chercher ensemble.'],['Luca','Sì, e poi scriviamo un esempio.','Oui, puis nous écrivons un exemple.']],
+      conversation:[['Luca','Di solito lavori in ufficio?','D’habitude, tu travailles au bureau ?'],['Rudy','Sì, ma oggi lavoro da casa perché sono stanco.','Oui, mais aujourd’hui je travaille de chez moi parce que je suis fatigué.'],['Luca','Vorresti uscire stasera?','Voudrais-tu sortir ce soir ?'],['Rudy','Forse. Potrei venire dopo cena.','Peut-être. Je pourrais venir après le dîner.']]
+    };
+    const IA_PRESENTATION=[['Mi chiamo Rudy.','Je m’appelle Rudy.'],['Come ti chiami?','Comment t’appelles-tu ?'],['Vivo a Zurigo.','Je vis à Zurich.'],['Vengo dalla Francia.','Je viens de France.'],['Sono francese.','Je suis français.'],['Lavoro a Zurigo.','Je travaille à Zurich.'],['Lavoro nel commercio digitale.','Je travaille dans le commerce numérique.'],['Sto imparando l’italiano.','J’apprends l’italien.']];
+    function iaSort(items){return [...items].sort((a,b)=>{const label=i=>i.italian||i.infinitive||displayTopic(i.title)||'';if(state.iaSort==='theme'){const c=displayTopic(a.category||'').localeCompare(displayTopic(b.category||''),'fr');if(c)return c;}return label(a).localeCompare(label(b),'it',{sensitivity:'base',numeric:true});});}
+    function iaSimpleItems(items){const q=normalizeAnswer(state.search||'');return iaSort(items.filter(i=>(!state.iaStarOnly||i.favourite)&&(!q||normalizeAnswer(searchBlob(i)).includes(q))));}
+
+    function iaDialogue(t){const rows=IA_DIALOGUES[t[0]]||IA_DIALOGUES.other;return `<article class="ia-conversation"><div class="ia-conversation-heading"><div><span class="eyebrow">Dans la vraie vie</span><h3>Une petite conversation</h3></div>${iaButton('toggle-translations',state.translationsVisible?'Masquer le français':'Voir le français')}</div>${rows.map(([person,it,fr],n)=>`<div class="ia-dialogue-row ${n%2?'ia-reply':''}"><span class="ia-person">${person}</span><div><p>${escapeHTML(it)}</p>${state.translationsVisible?`<span class="meta">${escapeHTML(fr)}</span>`:''}</div>${cardIconButton({action:'speak',icon:'speaker',label:'Écouter cette phrase',text:it})}</div>`).join('')}</article>`;}
+    function iaSection(title,items,kind='vocabulary',key=''){return `<section class="ia-content-section"><div class="section-heading"><h3>${title} <span class="meta">${items.length}</span></h3>${items.length?iaButton('ia-practice-section','Pratiquer',`data-kind="${kind}" data-key="${key}"`):''}</div>${kind==='verbs'?`<div class="library-grid">${items.map(iaVerbCard).join('')}</div>`:iaCards(items)}</section>`;}
+    function iaFullVerb(id,tense='present'){
+      const v=getItemById(id);if(!v)return;state.iaModalVerb=id;state.iaModalTense=tense;
+      const forms=iaForms(v,tense);const meaningGroups=[['andare','venire','uscire','rimanere'],['essere','stare','rimanere'],['volere','potere','dovere'],['dire','parlare'],['svegliarsi','lavarsi','vestirsi','dormire']];
+      const semantic=visibleItems('verbs').filter(x=>x.id!==id&&meaningGroups.some(g=>g.includes(v.infinitive)&&g.includes(x.infinitive))).slice(0,3);
+      const structural=visibleItems('verbs').filter(x=>x.id!==id&&(v.category==='Reflexive verbs'?x.category===v.category:v.regularity==='regular'?x.regularity==='regular'&&x.infinitive.slice(-3)===v.infinitive.slice(-3):x.category===v.category)).slice(0,3);
+      openModal(`<div class="ia-full-verb"><div class="modal-header"><div><span class="eyebrow">Fiche du verbe</span><h2 id="modalTitle">${escapeHTML(v.infinitive)}</h2><p>${escapeHTML(v.french)}</p></div><button type="button" class="icon-button" data-action="close-modal" aria-label="Fermer la fiche">${icons.close}</button></div><div class="ia-full-verb-meta"><span>Participe passé : <strong>${escapeHTML(v.pastParticiple||'à renseigner')}</strong></span>${cardIconButton({action:'ia-modal-star',icon:'heart',label:'Ajouter ou retirer l’étoile',id:v.id,active:v.favourite})}${cardIconButton({action:'speak',icon:'speaker',label:'Écouter le verbe',text:v.infinitive})}</div><div class="ia-modal-tense-tabs" role="tablist" aria-label="Temps du verbe">${Object.entries(IA_TENSES).map(([k,t])=>`<button type="button" role="tab" aria-selected="${tense===k}" class="chip ${tense===k?'active':''}" data-action="ia-modal-tense" data-value="${k}">${t[0]}</button>`).join('')}</div><div class="ia-conjugation ia-large-conjugation">${Object.entries(forms).filter(([p,f])=>f).map(([p,f])=>`<div class="split-row"><span>${p==='lui'?'lui / lei':p}</span><strong>${escapeHTML(f)}</strong>${cardIconButton({action:'speak',icon:'speaker',label:'Écouter '+f,text:iaFormAnswers(f)[0]})}</div>`).join('')||'<p>Ces formes ne sont pas encore renseignées. Vous pouvez les ajouter en modifiant le verbe.</p>'}</div>${tense==='past'?'<p class="meta">Avec essere : accord en genre et en nombre (andato/a, andati/e). Avec un verbe modal + infinitif, l’auxiliaire peut varier : ho dovuto lavorare, sono dovuto/a andare.</p>':''}<p class="ia-verb-example"><strong>Exemple au présent</strong><br/>${escapeHTML(v.exampleIt||'')}<br/><span class="meta">${escapeHTML(v.exampleFr||'')}</span></p><div class="ia-action-row">${iaButton('ia-modal-practice','Pratiquer ce temps','',true)}${iaButton('edit-item','Modifier le verbe',`data-type="verbs" data-id="${id}"`)}</div><details class="ia-related"><summary>Explorer des verbes proches</summary><p class="meta">Sens et usages associés (pas forcément synonymes)</p><div class="filter-row">${semantic.map(x=>iaButton('ia-open-verb',escapeHTML(x.infinitive),`data-id="${x.id}"`)).join('')||'<span class="meta">Pas encore de verbe associé.</span>'}</div><p class="meta">${v.regularity==='regular'?'Même terminaison':v.category==='Reflexive verbs'?'Autres verbes pronominaux':'Même famille d’apprentissage'}</p><div class="filter-row">${structural.map(x=>iaButton('ia-open-verb',escapeHTML(x.infinitive),`data-id="${x.id}"`)).join('')||'<span class="meta">Pas encore de verbe associé.</span>'}</div></details></div>`);
+    }
+
     function iaButton(action,label,attrs='',primary=false){return `<button type="button" class="button ${primary?'primary':'secondary'} small" data-action="${action}" ${attrs}>${label}</button>`;}
     function iaHeading(title,desc,eyebrow='Mon italien'){return `<div class="section-heading ia-heading"><div><span class="eyebrow">${eyebrow}</span><h2>${escapeHTML(title)}</h2><p>${escapeHTML(desc)}</p></div></div>`;}
-    function iaTools(type){return `<div class="ia-tools"><input id="iaSearch" class="search-input" type="search" aria-label="Rechercher" placeholder="Chercher un mot, une phrase…" value="${escapeHTML(state.search||'')}"/><div class="filter-row">${[['all','Tout'],['favourites','Favoris'],['difficult','Difficile'],['due','À réviser'],['custom','Mes ajouts']].map(([k,l])=>`<button type="button" class="chip ${state.filter===k?'active':''}" data-action="ia-filter" data-value="${k}">${l}</button>`).join('')}</div>${type?iaButton('add-item','+ Ajouter',`data-type="${type}"`):''}</div>`;}
-    function iaBindSearch(){const e=document.getElementById('iaSearch');e?.addEventListener('input',()=>{const pos=e.selectionStart;state.search=e.value;saveState();render();const n=document.getElementById('iaSearch');n?.focus();if(n?.type!=='search')n?.setSelectionRange(pos,pos);});}
-    function iaThemeItems(t){return visibleItems('vocabulary').filter(i=>i.category===t[3] || (t[0]==='other' && !IA_THEMES.some(x=>x[3]===i.category) && i.category!=='Useful expressions'));}
+    function iaTools(type){return `<div class="ia-tools"><input id="iaSearch" class="search-input" type="search" aria-label="Rechercher" placeholder="Chercher en italien ou en français…" value="${escapeHTML(state.search||'')}"/><button type="button" class="chip ${state.iaStarOnly?'active':''}" data-action="ia-stars" aria-pressed="${!!state.iaStarOnly}">☆ Mes étoiles</button><label class="ia-sort-label">Trier<select id="iaSort" class="form-select"><option value="alpha" ${state.iaSort!=='theme'?'selected':''}>A → Z</option><option value="theme" ${state.iaSort==='theme'?'selected':''}>Par thème</option></select></label>${type?iaButton('add-item','+ Ajouter',`data-type="${type}"`):''}</div>`;}
+    function iaBindSearch(){const e=document.getElementById('iaSearch');e?.addEventListener('input',()=>{state.search=e.value;saveState();render();document.getElementById('iaSearch')?.focus();});document.getElementById('iaSort')?.addEventListener('change',e=>{state.iaSort=e.target.value;saveState();render();});}
+    function iaThemeItems(t){if(t[0]==='conversation')return visibleItems('vocabulary').filter(i=>i.category==='Useful expressions'||IA_BUILD.some(b=>b[3].some(w=>normalizeAnswer(w)===normalizeAnswer(i.italian))));return visibleItems('vocabulary').filter(i=>i.category===t[3] || (t[0]==='other' && !IA_THEMES.some(x=>x[3]===i.category) && i.category!=='Useful expressions'));}
     function iaThemeVerbs(t){return visibleItems('verbs').filter(v=>t[5].includes(v.infinitive));}
     function iaCards(items){return items.length?`<div class="library-grid">${items.map(renderVocabularyCard).join('')}</div>`:emptyItemsHTML();}
     function iaThemes(){
       const theme=IA_THEMES.find(t=>t[0]===state.iaTheme);
       if(theme){iaThemeDetail(theme);return;}
       const q=normalizeAnswer(state.search||'');
-      const themes=IA_THEMES.filter(t=>(!q||normalizeAnswer(t[1]+' '+t[2]).includes(q)||iaThemeItems(t).some(i=>normalizeAnswer(searchBlob(i)).includes(q)))&&(state.filter==='all'||filterItems(iaThemeItems(t)).length));
+      const themes=[...IA_THEMES].sort((a,b)=>state.iaSort!=='theme'?a[1].localeCompare(b[1],'fr'):0).filter(t=>(!q||normalizeAnswer(t[1]+' '+t[2]).includes(q)||iaThemeItems(t).some(i=>normalizeAnswer(searchBlob(i)).includes(q)))&&(!state.iaStarOnly||iaSimpleItems(iaThemeItems(t)).length||iaSimpleItems(iaThemeVerbs(t)).length));
       dom.main.innerHTML=`<section class="page">${iaHeading('L’italien, dans votre quotidien.','Choisissez une situation. Retrouvez ses mots, ses phrases et ses verbes.','Cosa impariamo oggi?')}<div class="ia-daily"><div><strong>Un peu de pratique ?</strong><span>Une séance de 10 questions pour entretenir vos acquis.</span></div>${iaButton('start-daily','Ma séance du jour →','',true)}</div>${iaTools()}<div class="ia-theme-grid">${themes.map(t=>`<button type="button" class="ia-theme-card" data-action="ia-theme" data-value="${t[0]}"><div class="ia-art-panel ia-color-${t[4]}">${iaArt(t[4])}</div><div class="ia-theme-copy"><h3>${t[1]}</h3><p>${t[2]}</p><span class="meta">${iaThemeItems(t).length} mots et phrases · ${iaThemeVerbs(t).length} verbes <span aria-hidden="true">↗</span></span></div></button>`).join('')}</div>${!themes.length?emptyItemsHTML():''}<div class="ia-footnote">Vos ajouts, favoris et progrès sont conservés dans ce navigateur. Exportez-les pour les transférer.</div></section>`;
       iaBindSearch();
     }
     function iaThemeDetail(t){
-      const tab=state.iaThemeTab||'words';const all=iaThemeItems(t);const items=filterItems(all.filter(i=>tab==='phrases'?i.wordType==='phrase':i.wordType!=='phrase'));
       state.learnType='vocabulary';state.currentTopic=t[3];state.lastLesson={type:'vocabulary',topic:t[3]};
-      let content=tab==='verbs'?renderVerbLesson(filterItems(iaThemeVerbs(t))):iaCards(items);
-      if(tab==='words'&&t[0]==='basics')content=renderVocabularyLesson('Basics',items);
-      if(tab==='words'&&t[0]==='family')content=renderFamilyExplorer(filterItems(all))+iaCards(items);
-      if(tab==='words'&&t[0]==='health')content=renderBodyExplorer(filterItems(all))+iaCards(items);
-      dom.main.innerHTML=`<section class="page">${iaButton('ia-back','← Tous les thèmes')}<div class="ia-detail-head"><div>${iaHeading(t[1],t[2],'Thèmes de vie')}</div><div class="ia-mini-art">${iaArt(t[4])}</div></div><div class="ia-tabs" role="tablist" aria-label="Contenu du thème">${[['words','Mots'],['phrases','Phrases utiles'],['verbs','Verbes']].map(([k,l])=>`<button role="tab" aria-selected="${tab===k}" class="chip ${tab===k?'active':''}" data-action="ia-theme-tab" data-value="${k}">${l}</button>`).join('')}</div><div class="ia-action-row">${iaButton('ia-practice-theme','Pratiquer '+(tab==='verbs'?'ces verbes':tab==='phrases'?'ces phrases':'ces mots'),'',true)}${iaButton('toggle-translations',state.translationsVisible?'Masquer le français':'Afficher le français')}${tab==='verbs'?'<span class="meta">Présent · choisissez un autre temps dans Verbes.</span>':''}</div>${iaTools(tab==='verbs'?'verbs':'vocabulary')}${content}<article class="card" style="margin-top:22px"><h3>Mes notes</h3><textarea class="notes-area" data-action="lesson-note" aria-label="Notes pour ce thème">${escapeHTML(state.personalNotes['vocabulary:'+t[3]]||'')}</textarea></article></section>`;iaBindSearch();
+      const all=iaSimpleItems(iaThemeItems(t)),words=all.filter(i=>i.wordType!=='phrase'),phrases=all.filter(i=>i.wordType==='phrase'),verbs=iaSimpleItems(iaThemeVerbs(t));
+      let content='';
+      if(t[0]==='basics'){
+        const presentation=all.filter(i=>i.iaPresentation||IA_PRESENTATION.some(r=>normalizeAnswer(r[0])===normalizeAnswer(i.italian)));
+        content+=iaSection('Se présenter',presentation,'vocabulary','presentation');
+        const others=all.filter(i=>!presentation.includes(i));
+        BASICS_SECTIONS.forEach(group=>{const items=others.filter(i=>basicsSectionForItem(i)===group);if(items.length)content+=iaSection(displayTopic(group),items,'vocabulary',group);});
+      }else if(t[0]==='conversation'){
+        IA_BUILD.forEach(b=>{const ids=new Set(iaBuildingItems(b).map(i=>i.id));const items=all.filter(i=>ids.has(i.id));if(items.length)content+=iaSection(b[1],items,'vocabulary',b[0]);});
+      }else{
+        if(t[0]==='family')content+=renderFamilyExplorer(all);if(t[0]==='health')content+=renderBodyExplorer(all);
+        content+=iaSection('Mots à retenir',words,'vocabulary','words')+iaSection('Phrases utiles',phrases,'vocabulary','phrases');
+      }
+      content+=iaSection('Verbes de la situation',verbs,'verbs','verbs');
+      dom.main.innerHTML=`<section class="page">${iaButton('ia-back','← Tous les thèmes')}<header class="ia-hero-banner ia-color-${t[4]}"><div><span class="eyebrow">L’italien au quotidien</span><h2>${t[1]}</h2><p>${t[2]}</p></div><div class="ia-hero-art">${iaArt(t[4])}</div><div class="ia-hero-shape" aria-hidden="true"></div></header>${iaDialogue(t)}${iaTools('vocabulary')}${content}</section>`;iaBindSearch();
     }
     const iaPersons=['io','tu','lui','noi','voi','loro'];
     const iaReflexives=['mi','ti','si','ci','vi','si'];
@@ -4031,27 +4079,20 @@
       }));
     }
     function iaFormAnswers(form){return form.endsWith('o/a')?[form.slice(0,-3)+'o',form.slice(0,-3)+'a']:form.endsWith('i/e')?[form.slice(0,-3)+'i',form.slice(0,-3)+'e']:[form];}
-    function iaVerbCard(v){const tense=state.iaTense||'present';const forms=iaForms(v,tense);return `<article class="library-card"><div class="card-header"><span class="badge accent">${IA_TENSES[tense][0]}</span><span class="badge">${v.auxiliary==='essere'?'essere':'avere'}</span></div><div class="term">${escapeHTML(v.infinitive)}</div><div class="ia-verb-meaning">${escapeHTML(v.french)}</div><div class="meta-row"><span>Participe passé : <strong>${escapeHTML(v.pastParticiple||'à renseigner')}</strong></span></div><div class="ia-conjugation">${Object.entries(forms).filter(([p,f])=>f).map(([p,f])=>`<div class="split-row"><span>${p==='lui'?'lui / lei':p}</span><strong>${escapeHTML(f)}</strong>${cardIconButton({action:'speak',icon:'speaker',label:'Écouter '+f,text:iaFormAnswers(f)[0]})}</div>`).join('')||'<p class="meta">Ces formes ne sont pas encore renseignées.</p>'}</div><div class="card-tools">${iaButton('ia-practice-verb','Pratiquer',`data-id="${v.id}"`,true)}${cardIconButton({action:'toggle-favourite',icon:'heart',label:'Favori',id:v.id,active:v.favourite})}${cardIconButton({action:'toggle-difficult',icon:'difficult',label:'Difficile',id:v.id,active:v.difficulty==='difficult'})}${cardIconButton({action:'edit-item',icon:'edit',label:'Modifier le verbe',id:v.id})}</div></article>`;}
+    function iaVerbCard(v){return `<article class="library-card ia-compact-verb"><div class="card-header"><span class="badge">${escapeHTML(displayTopic(v.category))}</span>${cardIconButton({action:'toggle-favourite',icon:'heart',label:v.favourite?'Retirer l’étoile':'Ajouter une étoile',id:v.id,active:v.favourite})}</div><button type="button" class="ia-verb-open" data-action="ia-open-verb" data-id="${v.id}"><strong>${escapeHTML(v.infinitive)}</strong><span>${escapeHTML(v.french)}</span><small>Voir la fiche et les 4 temps ↗</small></button><div class="example">${escapeHTML(v.exampleIt||'')}</div></article>`;}
     function iaVerbs(){
       state.learnType='verbs';state.currentTopic=null;
-      const tense=state.iaTense||'present',group=state.iaVerbGroup||'all';
-      const groups=[['all','Tous'],['Essential verbs','Essentiels'],['Modal verbs','Devoir, pouvoir, vouloir'],['Regular verbs','Réguliers'],['Common irregular verbs','Irréguliers'],['Reflexive verbs','Pronominaux']];
-      const vs=filterItems(visibleItems('verbs').filter(v=>group==='all'||v.category===group));
-      dom.main.innerHTML=`<section class="page">${iaHeading('Les verbes, un temps à la fois.','Choisissez le temps à travailler, puis vos verbes.')}<div class="ia-tense-grid">${Object.entries(IA_TENSES).map(([k,[name,it,desc]])=>`<button type="button" class="ia-tense-card ${tense===k?'selected':''}" data-action="ia-tense" data-value="${k}"><span class="meta">${it}</span><strong>${name}</strong><span>${desc}</span></button>`).join('')}</div><div class="ia-action-row">${iaButton('ia-practice-verbs','Pratiquer ce temps','',true)}${iaButton('ia-tense-rule','Comprendre ce temps')}${iaButton('ia-go-building','Je voudrais / pourrais / devrais')}</div><div class="filter-row">${groups.map(([k,l])=>`<button type="button" class="chip ${group===k?'active':''}" data-action="ia-verb-group" data-value="${k}">${l}</button>`).join('')}</div>${iaTools('verbs')}${tense==='past'?'<div class="ia-note">Avec essere, le participe s’accorde : andato / andata, andati / andate. Pour les verbes modaux suivis d’un infinitif, l’auxiliaire peut varier : ho dovuto lavorare, sono dovuto/a andare.</div>':''}<div class="library-grid">${vs.map(iaVerbCard).join('')}</div>${vs.length?'':emptyItemsHTML()}</section>`;iaBindSearch();
+      const groups=[['all','Tous les verbes'],['Essential verbs','Les essentiels'],['Modal verbs','Vouloir, pouvoir, devoir'],['Reflexive verbs','Les actions sur soi']];const group=state.iaVerbGroup||'all';
+      const vs=iaSimpleItems(visibleItems('verbs').filter(v=>group==='all'||v.category===group));
+      dom.main.innerHTML=`<section class="page">${iaHeading('Quel verbe cherchez-vous ?','Ouvrez une carte pour consulter ses temps, écouter les formes et pratiquer.')}<div class="filter-row">${groups.map(([k,l])=>`<button type="button" class="chip ${group===k?'active':''}" data-action="ia-verb-group" data-value="${k}">${l}</button>`).join('')}</div>${iaTools('verbs')}<div class="library-grid">${vs.map(iaVerbCard).join('')}</div>${vs.length?'':emptyItemsHTML()}</section>`;iaBindSearch();
     }
-    function iaBuildingItems(b){return visibleItems('vocabulary').filter(i=>b[0]==='conversation'?i.category==='Useful expressions':b[4]?.includes(i.id)||b[3].some(w=>normalizeAnswer(i.italian)===normalizeAnswer(w)));}
-    function iaBuilding(){
-      const b=IA_BUILD.find(b=>b[0]===state.iaBuild);
-      if(!b){dom.main.innerHTML=`<section class="page">${iaHeading('Des mots aux phrases.','Les petits mots qui rendent votre italien plus naturel.')}<div class="ia-note"><strong>Une phrase, plusieurs briques.</strong><p>Di solito lavoro in ufficio, ma oggi lavoro da casa perché sono stanco.</p><span>D’habitude je travaille au bureau, mais aujourd’hui je travaille de chez moi parce que je suis fatigué.</span></div><div class="ia-theme-grid">${IA_BUILD.map(b=>`<button type="button" class="ia-topic-card" data-action="ia-building" data-value="${b[0]}"><span class="eyebrow">${b[0]==='polite'?'Conditionnel · premières expressions':'Parler naturellement'}</span><h3>${b[1]}</h3><p>${b[2]}</p><span>${iaBuildingItems(b).length} cartes →</span></button>`).join('')}</div></section>`;return;}
-      state.learnType='vocabulary';state.currentTopic='Useful expressions';
-      dom.main.innerHTML=`<section class="page">${iaButton('ia-build-back','← Construire une phrase')}${iaHeading(b[1],b[2])}${b[0]==='polite'?'<div class="ia-note"><strong>Vouloir, pouvoir, devoir au conditionnel.</strong><p>Vorrei = je voudrais (would like). Potrei = je pourrais (could). Dovrei = je devrais (should).</p><p>Ajoutez un infinitif : vorrei prenotare, potrei venire, dovrei studiare. « Would » n’a pas une seule traduction en italien.</p></div>':''}${b[0]==='frequency'?'<div class="ia-note">Pour dire « jamais », on utilise souvent non + verbe + mai : Non bevo mai caffè.</div>':''}<div class="ia-action-row">${iaButton('ia-practice-build','Pratiquer ces cartes','',true)}${iaButton('toggle-translations',state.translationsVisible?'Masquer le français':'Afficher le français')}</div>${iaTools('vocabulary')}${iaCards(filterItems(iaBuildingItems(b)))}</section>`;iaBindSearch();
-    }
+    function iaBuildingItems(b){return visibleItems('vocabulary').filter(i=>b[0]==='conversation'?i.category==='Useful expressions'&&!IA_BUILD.filter(x=>x[0]!=='conversation').some(x=>x[3].some(w=>normalizeAnswer(i.italian)===normalizeAnswer(w))):b[4]?.includes(i.id)||b[3].some(w=>normalizeAnswer(i.italian)===normalizeAnswer(w)));}
     function iaGrammar(){
       state.learnType='grammar';
       if(state.currentTopic){renderLessonPage();return;}
       const groups=[['Construire et accorder',['Sentence basics','Articles and nouns','Adjectives','Possessifs']],['Pronoms et relations',['Verbes pronominaux','Prepositions']],['Comprendre les temps',['Present tense','Passato prossimo','Imperfetto','Futuro semplice','Tra, da et fa']],['Éviter les confusions',['Useful comparisons']]];
       const used=new Set(groups.flatMap(g=>g[1]));const other=visibleItems('grammar').filter(i=>!used.has(i.title));if(other.length)groups.push(['Mes autres leçons',other.map(i=>i.title)]);
-      dom.main.innerHTML=`<section class="page">${iaHeading('Une règle, des exemples.','Possessifs, pronoms, accords et temps : trouvez la règle dont vous avez besoin.')} ${iaTools('grammar')}${groups.map(([title,topics])=>{const items=filterItems(visibleItems('grammar').filter(i=>topics.includes(i.title)));return items.length?`<div class="section-heading"><h3>${title}</h3></div><div class="ia-theme-grid">${items.map(i=>`<button type="button" class="ia-topic-card" data-action="ia-rule" data-value="${escapeHTML(i.title)}"><span class="eyebrow">${i.time||8} min</span><h3>${escapeHTML(displayTopic(i.title))}</h3><p>${escapeHTML(i.description||i.explanation)}</p><span>Voir les exemples →</span></button>`).join('')}</div>`:''}).join('')}</section>`;iaBindSearch();
+      dom.main.innerHTML=`<section class="page">${iaHeading('Une règle, des exemples.','Possessifs, pronoms, accords et temps : trouvez la règle dont vous avez besoin.')} ${iaTools('grammar')}${groups.map(([title,topics])=>{const items=iaSimpleItems(visibleItems('grammar').filter(i=>topics.includes(i.title)));return items.length?`<div class="section-heading"><h3>${title}</h3></div><div class="ia-theme-grid">${items.map(i=>`<button type="button" class="ia-topic-card" data-action="ia-rule" data-value="${escapeHTML(i.title)}"><span class="eyebrow">${i.time||8} min</span><h3>${escapeHTML(displayTopic(i.title))}</h3><p>${escapeHTML(i.description||i.explanation)}</p><span>Voir les exemples →</span></button>`).join('')}</div>`:''}).join('')}</section>`;iaBindSearch();
     }
         const iaOriginalPractice=renderPractice;
     const iaOriginalQuestion=makeQuestionFromItem;
@@ -4063,21 +4104,37 @@
     };
     renderPractice=function(){iaOriginalPractice();if(!state.session){const first=dom.main.querySelector('.practice-card');if(first)first.insertAdjacentHTML('beforeend',`<label class="ia-practice-tense">Temps pour les exercices de conjugaison<select class="form-select" id="iaPracticeTense">${Object.entries(IA_TENSES).map(([k,v])=>`<option value="${k}" ${k===(state.practiceTense||'present')?'selected':''}>${v[0]}</option>`).join('')}</select></label>`);document.getElementById('iaPracticeTense')?.addEventListener('change',e=>{state.practiceTense=e.target.value;saveState();});}};
     render=function(){
-      if(['today','learn'].includes(state.section)){if(state.section==='today')state.section='themes';else state.section=state.learnType==='verbs'?'verbs':state.learnType==='grammar'?'grammar':'themes';}
+      if(state.section==='today')state.section='themes';
+      if(state.section==='learn')state.section=state.learnType==='verbs'?'verbs':state.learnType==='grammar'?'grammar':'themes';
+      if(state.section==='building'){state.section='themes';state.iaTheme='conversation';}
       const nav=IA_NAV.find(n=>n[0]===state.section)||IA_NAV[0];
       document.querySelectorAll('[data-nav]').forEach(e=>{const active=e.dataset.nav===nav[0];e.classList.toggle('active',active);if(active)e.setAttribute('aria-current','page');else e.removeAttribute('aria-current');});
       dom.heading.textContent=nav[1];dom.subheading.textContent=nav[2];
-      if(nav[0]==='themes')iaThemes();else if(nav[0]==='verbs')iaVerbs();else if(nav[0]==='building')iaBuilding();else if(nav[0]==='grammar')iaGrammar();else renderPractice();
+      if(nav[0]==='themes')iaThemes();else if(nav[0]==='verbs')iaVerbs();else if(nav[0]==='grammar')iaGrammar();else renderPractice();
       dom.main.focus({preventScroll:true});
     };
     renderLearn=function(){render();};
     // Original handlers call this after reveal actions and basics filters.
     const iaOriginalLesson=renderLessonPage;
-    renderLessonPage=function(){if(state.section==='themes'&&state.iaTheme)iaThemes();else if(state.section==='building')iaBuilding();else iaOriginalLesson();};
-    setNavigation=function(section){state.section=section;state.currentTopic=null;state.iaTheme=null;state.iaBuild=null;state.search='';state.filter='all';saveState();render();window.scrollTo({top:0,behavior:'smooth'});};
+    renderLessonPage=function(){if(state.section==='themes'&&state.iaTheme)iaThemes();else iaOriginalLesson();};
+    setNavigation=function(section){state.section=section;state.currentTopic=null;state.iaTheme=null;state.iaBuild=null;state.search='';state.filter='all';state.iaStarOnly=false;saveState();render();window.scrollTo({top:0,behavior:'smooth'});};
     function iaPractice(ids,verbs=false){if(!ids.length){showToast('Aucun élément à pratiquer avec ces filtres.','error');return;}state.practiceTense=verbs?(state.iaTense||'present'):'present';buildPracticeSession({scope:verbs?'verbs':'mixed',topic:'All topics',mode:verbs?'conjugation':'mixed',count:10,itemIds:ids});}
     document.addEventListener('click',e=>{
       const el=e.target.closest('[data-action]');if(!el)return;const a=el.dataset.action,k=el.dataset.value;
+      if(a==='ia-open-verb'){iaFullVerb(el.dataset.id);return;}
+      if(a==='ia-modal-tense'){iaFullVerb(state.iaModalVerb,k);return;}
+      if(a==='ia-modal-star'){const v=getItemById(state.iaModalVerb);v.favourite=!v.favourite;saveState();render();iaFullVerb(v.id,state.iaModalTense);return;}
+      if(a==='ia-modal-practice'){const id=state.iaModalVerb;state.iaTense=state.iaModalTense;closeModal();iaPractice([id],true);return;}
+      if(a==='ia-stars'){state.iaStarOnly=!state.iaStarOnly;saveState();render();return;}
+      if(a==='ia-practice-section'){
+        const t=IA_THEMES.find(t=>t[0]===state.iaTheme);let items=iaSimpleItems(el.dataset.kind==='verbs'?iaThemeVerbs(t):iaThemeItems(t));const key=el.dataset.key;
+        if(key==='words')items=items.filter(i=>i.wordType!=='phrase');if(key==='phrases')items=items.filter(i=>i.wordType==='phrase');
+        if(key==='presentation')items=items.filter(i=>i.iaPresentation||IA_PRESENTATION.some(r=>normalizeAnswer(r[0])===normalizeAnswer(i.italian)));
+        if(BASICS_SECTIONS.includes(key))items=items.filter(i=>basicsSectionForItem(i)===key);
+        const b=IA_BUILD.find(b=>b[0]===key);if(b){const ids=new Set(iaBuildingItems(b).map(i=>i.id));items=items.filter(i=>ids.has(i.id));}
+        state.iaTense='present';iaPractice(items.map(i=>i.id),el.dataset.kind==='verbs');return;
+      }
+
       if(a==='back-to-topics'){state.currentTopic=null;render();return;}
       if(a==='practice-topic'&&state.section==='grammar'){iaPractice(getTopicItems('grammar',state.currentTopic).map(i=>i.id));return;}
       if(!a.startsWith('ia-'))return;
@@ -4087,13 +4144,8 @@
       if(a==='ia-filter')state.filter=k;
       if(a==='ia-tense')state.iaTense=k;
       if(a==='ia-verb-group')state.iaVerbGroup=k;
-      if(a==='ia-building'){state.section='building';state.iaBuild=k;state.search='';state.filter='all';}
-      if(a==='ia-go-building'){state.section='building';state.iaBuild='polite';state.search='';state.filter='all';}
-      if(a==='ia-build-back'){state.iaBuild=null;state.search='';state.filter='all';}
       if(a==='ia-rule'){state.section='grammar';state.currentTopic=k;}
       if(a==='ia-tense-rule'){state.section='grammar';state.currentTopic={present:'Present tense',past:'Passato prossimo',imperfect:'Imperfetto',future:'Futuro semplice'}[state.iaTense||'present'];}
-      if(a==='ia-practice-theme'){const t=IA_THEMES.find(t=>t[0]===state.iaTheme),tab=state.iaThemeTab||'words';state.iaTense='present';const items=tab==='verbs'?iaThemeVerbs(t):iaThemeItems(t).filter(i=>tab==='phrases'?i.wordType==='phrase':i.wordType!=='phrase');iaPractice(filterItems(items).map(i=>i.id),tab==='verbs');return;}
-      if(a==='ia-practice-build'){iaPractice(filterItems(iaBuildingItems(IA_BUILD.find(b=>b[0]===state.iaBuild))).map(i=>i.id));return;}
       if(a==='ia-practice-verbs'){iaPractice(filterItems(visibleItems('verbs').filter(v=>(!state.iaVerbGroup||state.iaVerbGroup==='all'||v.category===state.iaVerbGroup)&&Object.values(iaForms(v,state.iaTense||'present')).some(Boolean))).map(i=>i.id),true);return;}
       if(a==='ia-practice-verb'){iaPractice([el.dataset.id],true);return;}
       saveState();render();
@@ -4106,6 +4158,7 @@
 
     loadState();
     iaMigrate();
+    icons.heart='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m12 3 2.8 5.7 6.3.9-4.6 4.5 1.1 6.3L12 17.4l-5.6 3 1.1-6.3L3 9.6l6.2-.9Z"/></svg>';
     iaSetupNav();
     applyTheme();
     render();
