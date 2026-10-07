@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
-  <title>Mon italien · version 2.2</title>
+  <title>Mon italien · version 2.3</title>
   <style>
     :root {
       --bg: #f5f3ee;
@@ -1488,6 +1488,7 @@
     .modal-card:has(.ia-full-verb){width:min(1100px,calc(100vw - 30px))}.ia-all-tenses{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:20px 0}.ia-tense-panel{min-width:0;background:var(--surface-2);border-radius:18px;padding:22px}.ia-tense-panel h3{margin:0 0 5px;font-size:22px}.ia-tense-panel .ia-conjugation{margin:15px 0}.ia-tense-panel .split-row strong{overflow-wrap:anywhere}.ia-related h3{margin:0 0 15px}
     @media(max-width:600px){.ia-all-tenses{grid-template-columns:1fr}.ia-tense-panel{padding:18px}.ia-dialogue-row,.ia-dialogue-row.ia-reply{width:92%}.ia-dialogue-row.ia-reply{margin-left:auto;margin-right:0}.ia-dialogue-row:not(.ia-reply){margin-left:0;margin-right:auto}}
 
+  .simple-rating-row{display:flex;gap:12px;flex-wrap:wrap}.practice-star{float:right;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:28px;line-height:1;width:44px;height:44px;border-radius:14px;cursor:pointer}.practice-star.active{color:var(--accent);background:var(--accent-soft)}.answer-feedback p{margin:10px 0 0}
   </style>
 </head>
 <body>
@@ -1497,7 +1498,7 @@
         <div class="brand-mark" aria-hidden="true">IT</div>
         <div class="brand-copy">
           <strong>Mon italien</strong>
-          <span>Nouvelle version 2.2</span>
+          <span>Nouvelle version 2.3</span>
         </div>
       </div>
 
@@ -3395,6 +3396,11 @@
       if (['translation','fill','conjugation'].includes(question.type) && !session.submitted) setTimeout(() => document.getElementById('answerInput')?.focus(), 40);
     }
 
+    function practiceStarHTML(id) {
+      const item = getItemById(id);
+      return item ? `<button type="button" class="practice-star ${item.favourite ? 'active' : ''}" data-action="practice-star" data-id="${escapeHTML(id)}" aria-pressed="${!!item.favourite}" aria-label="${item.favourite ? 'Retirer l’étoile' : 'Ajouter une étoile'}" title="Garder cet élément dans mes étoiles">${item.favourite ? '★' : '☆'}</button>` : '';
+    }
+
     function renderQuestion(question) {
       const session = state.session;
       const result = session.answers[session.current];
@@ -3405,11 +3411,9 @@
         body = `<div class="flashcard" data-action="reveal-flashcard" role="button" tabindex="0" aria-label="Afficher la réponse">
           <div><span class="question-label">Carte mémoire</span><strong>${escapeHTML(question.prompt)}</strong>${session.revealed ? `<p>${escapeHTML(question.answer)}</p><p>${escapeHTML(question.example || '')}</p><p>${escapeHTML(question.explanation || '')}</p>` : '<p>Appuyez sur Espace ou cliquez pour révéler</p>'}</div>
         </div>
-        ${session.revealed ? `<div class="rating-row">
-          <button class="rating-button again" type="button" data-action="rate-answer" data-rating="again">À revoir <small>1</small></button>
-          <button class="rating-button difficult" type="button" data-action="rate-answer" data-rating="difficult">Difficile <small>2</small></button>
-          <button class="rating-button good" type="button" data-action="rate-answer" data-rating="good">Bien <small>3</small></button>
-          <button class="rating-button easy" type="button" data-action="rate-answer" data-rating="easy">Facile <small>4</small></button>
+        ${session.revealed ? `<div class="rating-row simple-rating-row">
+          <button class="button primary" type="button" data-action="rate-answer" data-rating="good">Je savais</button>
+          <button class="button secondary" type="button" data-action="rate-answer" data-rating="again">À retravailler</button>
         </div>` : ''}`;
       } else if (question.type === 'multiple') {
         body = `<div class="answer-options">${(question.options || []).map(option => `<button class="answer-option ${session.selectedOption === option ? 'selected' : ''}" type="button" data-action="select-option" data-option="${escapeHTML(option)}" ${session.submitted ? 'disabled' : ''}>${escapeHTML(option)}</button>`).join('')}</div>
@@ -3423,6 +3427,7 @@
 
       return `<article class="question-card">
         <div>
+          ${practiceStarHTML(question.source)}
           <span class="question-label">${escapeHTML(question.type === 'translation' ? 'Écrire la traduction' : question.type === 'fill' ? 'Compléter la phrase' : question.type === 'conjugation' ? 'Conjugaison' : question.type === 'multiple' ? 'Choix multiple' : question.type.replaceAll('-', ' '))}</span>
           <h2 class="question-prompt">${escapeHTML(question.prompt || 'Question à compléter')}</h2>
           ${question.direction ? `<p class="question-subprompt">${question.direction === 'fr-it' ? 'Écrivez la réponse en italien.' : 'Écrivez la réponse en français.'}</p>` : ''}
@@ -3434,22 +3439,9 @@
 
     function renderFeedback(result, answerText, explanation) {
       if (!result) return '';
-      const missingAccent = result.correct && normalizeAnswer(result.userAnswer) === normalizeAnswer(answerText) && String(result.userAnswer).toLowerCase() !== String(answerText).toLowerCase();
-      return `<div class="stack">
-        <div class="answer-feedback ${result.correct ? 'correct' : 'incorrect'}" role="status">
-          <strong>${result.correct ? 'Correct' : 'Pas tout à fait'}</strong><br />
-          Bonne réponse : <strong>${escapeHTML(answerText)}</strong><br />
-          ${result.userAnswer ? `Votre réponse : ${escapeHTML(result.userAnswer)}<br />` : ''}
-          ${missingAccent ? 'Votre réponse est acceptée, mais vérifiez les accents.<br />' : ''}
-          ${escapeHTML(explanation || '')}
-        </div>
-        <div class="rating-row">
-          <button class="rating-button again" type="button" data-action="rate-answer" data-rating="again">À revoir</button>
-          <button class="rating-button difficult" type="button" data-action="rate-answer" data-rating="difficult">Difficile</button>
-          <button class="rating-button good" type="button" data-action="rate-answer" data-rating="good">Bien</button>
-          <button class="rating-button easy" type="button" data-action="rate-answer" data-rating="easy">Facile</button>
-        </div>
-      </div>`;
+      return `<div class="stack"><div class="answer-feedback ${result.correct ? 'correct' : 'incorrect'}" role="status">
+        ${result.correct ? '<strong>Correct ✓</strong>' : `<strong>Pas tout à fait</strong><p>La bonne réponse : <strong>${escapeHTML(answerText)}</strong></p>${explanation ? `<p>${escapeHTML(explanation)}</p>` : ''}`}
+        </div><button class="button primary" type="button" data-action="next-practice">Suivant →</button></div>`;
     }
 
     function checkCurrentAnswer(forceUnknown = false) {
@@ -3471,7 +3463,14 @@
 
     function rateCurrentAnswer(rating) {
       const session = state.session;
+      if (!session || session.completed) return;
       const question = session.questions[session.current];
+      if (question.type === 'flashcard') {
+        if (!session.revealed) return;
+        const correct = rating === 'good';
+        session.answers[session.current] = { correct, userAnswer: '', at: nowIso(), selfAssessed: true };
+        if (correct) session.correct += 1;
+      } else if (!session.submitted) return;
       if (question.source) applyReviewRating(question.source, rating);
       if (rating === 'again' || rating === 'difficult') {
         if (question.source && !session.difficult.includes(question.source)) session.difficult.push(question.source);
@@ -3542,12 +3541,12 @@
         <p>Vous avez révisé ${session.questions.length} éléments et identifié ${session.difficult.length} éléments à revoir.</p>
         <div class="completion-stats">
           <div class="completion-stat"><strong>${session.correct}</strong><span>Bonnes réponses</span></div>
-          <div class="completion-stat"><strong>${session.difficult.length}</strong><span>Éléments difficiles</span></div>
+          <div class="completion-stat"><strong>${session.difficult.length}</strong><span>À retravailler</span></div>
           <div class="completion-stat"><strong>${minutes} min</strong><span>Temps passé</span></div>
         </div>
-        <p>${session.difficult.length ? 'Une courte révision des éléments difficiles aidera à les consolider.' : 'Tout s’est bien passé. Vous pouvez vous arrêter là pour aujourd’hui.'}</p>
+        <p>${session.difficult.length ? 'Vous pourrez reprendre les erreurs dans une courte séance.' : 'Tout s’est bien passé. Vous pouvez vous arrêter là pour aujourd’hui.'}</p>
         <div class="hero-actions" style="justify-content:center">
-          ${session.difficult.length ? '<button class="button secondary" type="button" data-action="restart-difficult">Reprendre les questions difficiles</button>' : ''}
+          ${session.difficult.length ? '<button class="button secondary" type="button" data-action="restart-difficult">Reprendre les erreurs</button>' : ''}
           <button class="button primary" type="button" data-action="finish-session">Retour aux thèmes</button>
         </div>
       </div></section>`;
@@ -3828,6 +3827,11 @@
       if (action === 'dont-know') checkCurrentAnswer(true);
       if (action === 'show-hint') showHint();
       if (action === 'rate-answer') rateCurrentAnswer(target.dataset.rating);
+      if (action === 'next-practice') { const result = state.session?.answers[state.session.current]; if (result) rateCurrentAnswer(result.correct ? 'good' : 'again'); }
+      if (action === 'practice-star') {
+        const item = getItemById(target.dataset.id);
+        if (item) { item.favourite = !item.favourite; saveState(); target.setAttribute('aria-pressed', String(item.favourite)); target.setAttribute('aria-label', item.favourite ? 'Retirer l’étoile' : 'Ajouter une étoile'); target.textContent = item.favourite ? '★' : '☆'; target.classList.toggle('active', item.favourite); }
+      }
       if (action === 'exit-session') confirmDialog({ title: 'Quitter cette séance ?', message: 'La séance en cours sera fermée.', confirmLabel: 'Quitter la séance', danger: true, onConfirm: () => { state.session = null; saveState(); closeModal(); render(); } });
       if (action === 'restart-difficult') {
         const ids = [...state.session.difficult];
@@ -3858,15 +3862,16 @@
         if (dom.modal.classList.contains('open')) closeModal();
         else if (dom.dataMenu.classList.contains('open')) { dom.dataMenu.classList.remove('open'); dom.dataMenuButton.setAttribute('aria-expanded', 'false'); }
       }
-      if (!state.session || state.session.completed) return;
+      if (!state.session || state.session.completed || state.section !== 'practice' || dom.modal.classList.contains('open')) return;
       const question = state.session.questions[state.session.current];
+      if (event.key === 'Enter' && state.session.submitted) { event.preventDefault(); rateCurrentAnswer(state.session.answers[state.session.current]?.correct ? 'good' : 'again'); return; }
       if (event.key === 'Enter' && ['translation','fill','conjugation'].includes(question.type) && !state.session.submitted) {
         event.preventDefault(); checkCurrentAnswer(false);
       }
       if (question.type === 'flashcard') {
-        if (event.code === 'Space' && !state.session.revealed) { event.preventDefault(); state.session.revealed = true; saveState(); renderSession(); }
-        if (state.session.revealed && ['1','2','3','4'].includes(event.key)) {
-          const ratings = { '1':'again','2':'difficult','3':'good','4':'easy' };
+        if (['Space','Enter'].includes(event.code) && !state.session.revealed) { event.preventDefault(); state.session.revealed = true; saveState(); renderSession(); }
+        if (state.session.revealed && ['1','2'].includes(event.key)) {
+          const ratings = { '1':'good','2':'again' };
           rateCurrentAnswer(ratings[event.key]);
         }
       }
